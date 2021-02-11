@@ -1,10 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchUsers, removeUsers} from '../../users/containers/reducer/reducer_users'
+import ContactForm from '../../form/ContactForm'
+
 
 
 
 const Home = ({fetchUsers, removeUsers, users}) => {
+
 
   const numberUserFetched = 1
   const numberUsersFetched = 10
@@ -20,6 +23,7 @@ const Home = ({fetchUsers, removeUsers, users}) => {
       <button onClick={loadNewUsers}>Load</button>
       <button onClick={clearUsers}>Reset</button>
       <button onClick={loadOneNewUser}>Add</button>
+      <div><ContactForm/></div>
     </div>
    );
 }

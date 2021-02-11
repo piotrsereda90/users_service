@@ -3,14 +3,14 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import Home from './home/components/Home'
 import Users from './users/components/Users'
 import Message from './ui/Message'
-import UserForm from './users/containers/UserForm'
+// import UserForm from './users/containers/UserForm'
 
 function App() {
 
-  const handelForm = (values) => {
-    console.log('values',values)
+  // const handelForm = (values) => {
+  //   console.log('values',values)
 
-  }
+  // }
   return (
     <div className="App">
       <Router>
@@ -35,7 +35,7 @@ function App() {
             <Users/>
           </Route>
         </Switch>
-        <UserForm onSubmit={handelForm}/>
+        {/* <UserForm onSubmit={handelForm}/> */}
       </Router>
     </div>
   );
