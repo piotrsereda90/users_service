@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Field, reduxForm } from 'redux-form'
+import '../style/form.scss'
 
 const validate = values => {
   const errors = {}
@@ -50,23 +51,20 @@ const renderField = ({
 )
 
 const UserForm = props => {
-  const { handleSubmit, pristine, reset, submitting } = props
+  const { handleSubmit, submitting } = props
   return (
-    <form className='form' onSubmit={handleSubmit}>
-      <Field
-        name="username"
-        type="text"
-        component={renderField}
-        label="Username"
-      />
-      <Field name="email" type="email" component={renderField} label="Email" />
-      <Field name="age" type="number" component={renderField} label="Age" />
-      <div>
+    <form  onSubmit={handleSubmit}>
+      <div className='form'>
+        <Field
+          name="username"
+          type="text"
+          component={renderField}
+          label="Username"
+        />
+        <Field name="email" type="email" component={renderField} label="Email" />
+        <Field name="age" type="number" component={renderField} label="Age" />
         <button type="submit" disabled={submitting}>
           Submit
-        </button>
-        <button type="button" disabled={pristine || submitting} onClick={reset}>
-          Clear Values
         </button>
       </div>
     </form>

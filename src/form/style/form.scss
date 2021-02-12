@@ -1,0 +1,42 @@
+form {
+  display: flex;
+  justify-content: center;
+  color: azure;
+
+  div {
+    margin-bottom: 20px;
+  }
+
+  span {
+    display: block;
+    height: 20px;
+  }
+}
+
+div.form {
+  min-width: 300px;
+  min-height: 341px;
+  border: 2px solid azure;
+  padding: 20px 30px;
+
+  div {
+    min-height: 50px;
+  }
+
+  input {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: .5s;
+
+    &:hover {
+      background-color: rgb(93, 102, 102);
+      color: azure;
+    }
+  }
+}

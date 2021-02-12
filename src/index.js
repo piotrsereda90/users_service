@@ -28,7 +28,7 @@ const persistor = persistStore(store);
 
 // const store = createStore(reducers, applyMiddleware(thunk));
 
-console.log(store.getState())
+  // console.log(store.getState())
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

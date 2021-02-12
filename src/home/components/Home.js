@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchUsers, removeUsers} from '../../users/containers/reducer/reducer_users'
-import ContactForm from '../../form/ContactForm'
+import {fetchUsers, removeUsers} from '../../users/containers/redux/reducer_users'
+import UsersNumber from './UsersNumber'
+import '../style/home.scss'
 
 
 
@@ -18,13 +19,14 @@ const Home = ({fetchUsers, removeUsers, users}) => {
   const loadOneNewUser =()=> fetchUsers(numberUserFetched)
  
   return (
-    <div>
-      <div><p style={{color:'white'}}>UsersNumber:{users.length}</p></div>
-      <button onClick={loadNewUsers}>Load</button>
-      <button onClick={clearUsers}>Reset</button>
-      <button onClick={loadOneNewUser}>Add</button>
-      <div><ContactForm/></div>
-    </div>
+    <>
+      <UsersNumber users={users}/>
+      <div className='buttonWrapper'>
+        <button onClick={loadNewUsers}>Load</button>
+        <button onClick={clearUsers}>Reset</button>
+        <button onClick={loadOneNewUser}>Add</button>
+      </div>
+    </>
    );
 }
  const mapDispatchToProps =(dispatch) =>({

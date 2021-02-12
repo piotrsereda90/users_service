@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {addMessage} from '../../../ui/reducer_messages'
+import {addMessage} from '../../../ui/redux/reducer_messages'
 
 const FETCH_USERS_REQUESTED = 'FETCH_USERS_REQUESTED';
 const FETCH_USERS_SUCCEEDED = 'FETCH_USERS_SUCCEEDED';

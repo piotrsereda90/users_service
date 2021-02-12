@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.App {
+
+  background-color: radial-gradient(ellipse at center,
+      #1d1449 0%,
+      #000000 100%);
+  background-image: radial-gradient(at center center,
+      rgb(29, 20, 73) 0%,
+      rgb(0, 0, 0) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  min-height: 100vh;
+
+  .Wrapper {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .routing {
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+
+      li {
+        padding: 20px;
+
+        .active {
+          text-decoration: underline;
+        }
+
+        a {
+          text-decoration: none;
+          color: azure;
+          transition: 4s;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+// input {
+//   display: block;
+//   margin: 20px
+// }
+
+// label {
+//   color: azure;
+//   margin: 20px
+// }
+
+// span {
+//   color: azure;
+//   margin: 20px
+// }
+
+// option {
+//   color: black;
+// }
+
+
+// .form {
+//   margin-top: 30px;
+// }

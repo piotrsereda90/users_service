@@ -1,8 +1,8 @@
 import React from 'react'
 
 import {connect} from 'react-redux'
-import UserForm from '../users/containers/UserForm'
-import {addMessage} from '../ui/reducer_messages'
+import UserForm from '../components/UserForm'
+import {addMessage} from '../../ui/redux/reducer_messages'
 
 
 const ContactForm = ({addMessage}) => {

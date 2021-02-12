@@ -1,13 +1,13 @@
 import React,{useEffect} from 'react'
 import{connect} from 'react-redux'
-import{removeMessage} from './reducer_messages'
+import{removeMessage} from '../redux/reducer_messages'
+import '../style/message.scss'
 
 const Message = ({message, type, isDisplayed, removeMessage}) => {
   
   const handelClosePopup = ()=> removeMessage()
   useEffect(()=>{
     const setInfo = setTimeout(() => {
-      console.log(isDisplayed)
       if(isDisplayed){
       removeMessage()
       }
@@ -16,7 +16,7 @@ const Message = ({message, type, isDisplayed, removeMessage}) => {
   })
   
   return ( 
-    <div style={{display: isDisplayed?'block': 'none'}} className={`type-${type}`}>
+    <div className='messageWrapper'style={{display: isDisplayed?'block': 'none'}} className={`type-${type}`}>
      <span>{message}</span><button onClick={handelClosePopup}>X</button>
     </div>);
 }

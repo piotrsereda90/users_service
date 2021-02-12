@@ -17,7 +17,6 @@ export const removeMessage = () => ({
 })
 
 export default (state=initialState, action) => {
-  console.log(action.payload)
 switch(action.type){
   case ADD_MESSAGE:
     return{
